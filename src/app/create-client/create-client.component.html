@@ -1,0 +1,214 @@
+<div class="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
+  <div class="mx-auto max-w-2xl">
+    <form [formGroup]="formData" (ngSubmit)="onClickSubmit()">
+      <div class="space-y-12">
+        <div class="border-b border-gray-900/10 pb-12">
+          <div
+            id="breadcrumb"
+            class="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6"
+          >
+            <ol
+              class="flex flex-wrap items-center w-full bg-blue-gray-50 bg-opacity-60 py-4 px-0 rounded-md"
+            >
+              <li
+                class="flex items-center text-blue-gray-900 antialiased font-sans text-sm font-normal leading-normal cursor-pointer transition-colors duration-300 hover:text-light-blue-500"
+              >
+                <a [routerLink]="['/']" class="opacity-60">Home</a>
+                <span
+                  class="text-blue-gray-500 text-sm antialiased font-sans font-normal leading-normal mx-2 pointer-events-none select-none"
+                  >/</span
+                >
+              </li>
+
+              <li
+                class="flex items-center text-blue-gray-900 antialiased font-sans text-sm font-normal leading-normal cursor-pointer transition-colors duration-300 hover:text-light-blue-500"
+              >
+                Create a Client
+              </li>
+            </ol>
+          </div>
+          <h2
+            class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight"
+          >
+            Create a Client
+          </h2>
+
+          <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+            <div class="col-span-full">
+              <div
+                *ngIf="this.isSumbitted"
+                class="p-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
+                role="alert"
+              >
+                <span class="font-medium">Success!</span> Thank you, your
+                meeting has been scheduled!.
+              </div>
+
+              <div
+                *ngIf="this.isMissingInfo"
+                class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+                role="alert"
+              >
+                <span class="font-medium">Error!</span> Please check the information and try
+                submitting again.
+              </div>
+            </div>
+            <div class="col-span-full">
+              <label
+                for="name"
+                class="block text-sm font-medium leading-6 text-gray-900"
+                >Name</label
+              >
+              <div class="mt-2">
+                <input
+                  formControlName="fullName"
+                  name="name"
+                  id="name"
+                  placeholder="Enter Name"
+                  class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
+              <div
+                *ngIf="
+                  !formData.controls['fullName'].valid &&
+                  (formData.controls['fullName'].dirty ||
+                    formData.controls['fullName'].touched)
+                "
+                class="text-red-500 text-sm mt-1"
+              >
+                *A Topic is required
+              </div>
+            </div>
+
+            <div class="col-span-full">
+              <label
+                for="email"
+                class="block text-sm font-medium leading-6 text-gray-900"
+                >Email</label
+              >
+              <div class="mt-2">
+                <input
+                  formControlName="email"
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Enter Email"
+                  class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
+              <div
+                *ngIf="
+                  !formData.controls['email'].valid &&
+                  (formData.controls['email'].dirty ||
+                    formData.controls['email'].touched)
+                "
+                class="text-red-500 text-sm mt-1"
+              >
+                *An email is required
+              </div>
+            </div>
+
+            <div class="col-span-full">
+              <label
+                for="address"
+                class="block text-sm font-medium leading-6 text-gray-900"
+                >Address</label
+              >
+              <div class="mt-2">
+                <input
+                  formControlName="address"
+                  type="text"
+                  name="address"
+                  id="address"
+                  placeholder="Enter Address"
+                  class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
+              <div
+                *ngIf="
+                  !formData.controls['address'].valid &&
+                  (formData.controls['address'].dirty ||
+                    formData.controls['address'].touched)
+                "
+                class="text-red-500 text-sm mt-1"
+              >
+                *An address is required
+              </div>
+            </div>
+
+            <div class="col-span-full">
+              <label
+                for="password1"
+                class="block text-sm font-medium leading-6 text-gray-900"
+                >Password</label
+              >
+              <div class="mt-2">
+                <input
+                  formControlName="password1"
+                  type="text"
+                  name="password1"
+                  id="password1"
+                  placeholder="Enter password"
+                  class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
+              <div
+                *ngIf="
+                  !formData.controls['password1'].valid &&
+                  (formData.controls['password1'].dirty ||
+                    formData.controls['password1'].touched)
+                "
+                class="text-red-500 text-sm mt-1"
+              >
+                *A password is required
+              </div>
+            </div>
+
+            <div class="col-span-full">
+              <label
+                for="password2"
+                class="block text-sm font-medium leading-6 text-gray-900"
+                >Repeat Password</label
+              >
+              <div class="mt-2">
+                <input
+                  formControlName="password2"
+                  type="text"
+                  name="password2"
+                  id="password2"
+                  placeholder="Repeat password"
+                  class="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
+              <div
+                *ngIf="
+                  !formData.controls['password2'].valid &&
+                  (formData.controls['password2'].dirty ||
+                    formData.controls['password2'].touched)
+                "
+                class="text-red-500 text-sm mt-1"
+              >
+                *A repeat password is required
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 flex items-center justify-end gap-x-6">
+            <button
+              type="reset"
+              class="text-sm font-semibold leading-6 text-gray-900"
+            >
+              Reset
+            </button>
+            <button
+              type="submit"
+              class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Register
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## DB
 <img src="./screenshots/db_screenshot.png">
 
-Script to replicate the db can be found in the `sql` directory [here](./create_project_db_.sql)
+Script to replicate the db can be found in the `sql` directory [here](./sql)
 
 ## Development server
 

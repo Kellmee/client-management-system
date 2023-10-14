@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 
 ## DB
-<img src="./screenshots/db_screenshot.png" width="300">
+<img src="./screenshots/db_screenshot.png">
 
 ## Development server
 

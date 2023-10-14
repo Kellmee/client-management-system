@@ -6,6 +6,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## DB
 <img src="./screenshots/db_screenshot.png">
 
+Script to replicate the db can be found in the `sql` directory [here](./create_project_db_.sql)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

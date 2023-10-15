@@ -3,10 +3,21 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
 
 
+### Home Screen
+<img src="./screenshots/home-screen.png">
+
+### Create Client Screen
+<img src="./screenshots/create-client-screen.png">
+
+### Schedule Meeting Screen
+<img src="./screenshots/meeting-schedule-screen.png">
+
+
 ## DB
 <img src="./screenshots/db_screenshot.png">
 
 Script to replicate the db can be found in the `sql` directory [here](./sql)
+
 
 ## Development server
 

@@ -13,6 +13,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 <img src="./screenshots/meeting-schedule-screen.png">
 
 
+### Cypress
+<img src="./screenshots/cypress.png">
+
 ## DB
 <img src="./screenshots/db_screenshot.png">
 
